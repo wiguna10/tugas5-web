@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Website perkenalan diri</title>
+<title>Website Perkenalan Diri</title>
 
 <style>
-    
+
 body{
   margin:0;
   font-family:Arial, sans-serif;
@@ -30,30 +30,10 @@ nav button{
   background:#444;
   color:white;
 }
-.profil-container{
-    texs-align:center:
-    padding: 30px;
-}
-.foto-bulat{
-    widht: 220px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 50px;
-    display:block;
-    margin:20px auto;
-}
 
 nav button:hover{
   background:#666;
   transform:scale(1.1);
-}
-
-.logout{
-  background:red;
-}
-
-.logout:hover{
-  background:darkred;
 }
 
 section{
@@ -64,13 +44,27 @@ section{
 
 section.active{
   display:block;
-  
 }
 
 @keyframes fade{
   from{opacity:0; transform:translateY(20px);}
   to{opacity:1; transform:translateY(0);}
 }
+
+.profil-container{
+  text-align:center;
+  padding:30px;
+}
+
+.foto-bulat{
+  width:220px;
+  height:220px;
+  object-fit:cover;
+  border-radius:50%;
+  display:block;
+  margin:20px auto;
+}
+
 footer{
   background:#0d47a1;
   color:white;
@@ -79,6 +73,7 @@ footer{
   margin-top:40px;
   font-weight:bold;
 }
+
 .galeri-container{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
@@ -98,6 +93,7 @@ footer{
 .galeri-container img:hover{
   transform:scale(1.05);
 }
+
 </style>
 </head>
 
@@ -109,52 +105,67 @@ footer{
   <button onclick="showPage('about')">About</button>
   <button onclick="showPage('galeri')">Galeri</button>
   <button onclick="showPage('kontak')">Kontak</button>
-  <button class="logout" onclick="logout()">Logout</button>
 </nav>
 
 <section id="home" class="active">
-  <h1>Selamat datang</h1>
+  <h1>Selamat Datang</h1>
   <p>Assalammualaikum wr.wb</p>
-  <p>Apakabar semua salam kenal. ini website perdanaku.webseite ini adalah perkenalan diri saya.</p>
+  <p>Apakabar semua salam kenal. Ini website perdanaku. Website ini adalah perkenalan diri saya.</p>
 </section>
 
 <section id="profil">
   <h1>Profil Lupi Wiguna</h1>
+
   <div class="profil-container">
-    <img src="Lupi.jpeg"alt="foto lupi wiguna"
-    class="foto-bulat">
-    
-  <p><strong>Nama :</strong>lupi wiguna</p>
-  <p><strong>prodi :</strong> sistem informasi</p>
-  <p><strong>cita-cita :</strong> programer</p>
+    <img src="Lupi.jpeg" alt="Foto Lupi Wiguna" class="foto-bulat">
+
+    <p><strong>Nama :</strong> Lupi Wiguna</p>
+    <p><strong>Prodi :</strong> Sistem Informasi</p>
+    <p><strong>Cita-cita :</strong> Programmer</p>
   </div>
+
 </section>
 
 <section id="about">
   <h1>About</h1>
-  <p>Halo! Perkenalkan, nama saya <strong>lupi wigguna</strong>. Saya adalah mahasiswa jurusan <strong>sistem informasi</strong> yang memiliki minat besar dalam bidang teknologi, khususnya pemrograman dan pengembangan website.</p>
 
-<p>Saya senang belajar hal baru, terutama yang berkaitan dengan dunia IT. Bagi saya, teknologi bukan hanya alat, tetapi juga peluang untuk berkembang dan menciptakan solusi yang bermanfaat bagi banyak orang.</p>
+  <p>Halo! Perkenalkan, nama saya <strong>Lupi Wiguna</strong>. Saya adalah mahasiswa jurusan <strong>Sistem Informasi</strong> yang memiliki minat besar dalam bidang teknologi, khususnya pemrograman dan pengembangan website.</p>
 
-<p>Tujuan saya ke depan adalah menjadi seorang programmer profesional dan mampu membangun aplikasi atau sistem yang berguna bagi masyarakat.</p>
+  <p>Saya senang belajar hal baru, terutama yang berkaitan dengan dunia IT. Bagi saya, teknologi bukan hanya alat, tetapi juga peluang untuk berkembang dan menciptakan solusi yang bermanfaat bagi banyak orang.</p>
+
+  <p>Tujuan saya ke depan adalah menjadi seorang programmer profesional dan mampu membangun aplikasi atau sistem yang berguna bagi masyarakat.</p>
+
 </section>
+
 <section id="galeri">
   <h1>Galeri Foto</h1>
 
   <div class="galeri-container">
-    <img src="WhatsApp Image 2026-03-04 at 11.07.19.jpeg" alt="Foto 1">
-    <img src="WhatsApp Image 2026-03-04 at 11.07.20.jpeg" alt="Foto 2">
-   
+    <img src="WhatsApp Image 2026-03-04 at 11.07.19.jpeg">
+    <img src="WhatsApp Image 2026-03-04 at 11.07.20.jpeg">
   </div>
+
 </section>
 
 <section id="kontak">
-  <h3>Email: lupiwiguna@gmail.com</h3>
-  <p>intagram : lupiiwgn4</p>
+  <h2>Kontak</h2>
+  <p>Email: lupiwiguna@gmail.com</p>
+  <p>Instagram: lupiiwgn4</p>
 </section>
 
 <footer>© 2026 Lupi Wiguna</footer>
 
-</body>
+<script>
 
+function showPage(id){
+  document.querySelectorAll("section").forEach(sec=>{
+    sec.classList.remove("active");
+  });
+
+  document.getElementById(id).classList.add("active");
+}
+
+</script>
+
+</body>
 </html>
