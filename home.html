@@ -153,25 +153,8 @@ footer{
   <p>intagram : lupiiwgn4</p>
 </section>
 
-
-<script>
-if(localStorage.getItem("login") !== "true"){
-  window.location.href="index.html";
-}
-
-function showPage(id){
-  document.querySelectorAll("section").forEach(sec=>{
-    sec.classList.remove("active");
-  });
-  document.getElementById(id).classList.add("active");
-}
-
-function logout(){
-  localStorage.removeItem("login");
-  window.location.href="index.html";
-}
-</script>
 <footer>© 2026 Lupi Wiguna</footer>
 
 </body>
+
 </html>
